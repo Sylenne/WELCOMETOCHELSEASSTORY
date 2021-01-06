@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+    	@font-face{
+        font-family: kabond;
+        src: "KABOND.otf";
+      }
+    	 p{
+ 
+        font-family: kabond;
+        font-size: 1.5em;
+        text-shadow: 5px 5px 10px black;
+        color: white;
+       }
+      .container {
+        opacity: 0;
+        transition: opacity 1s;
+      }
+
+      .container-loaded {
+        opacity: 1;
+      }
+      body {
+      	background-color: #001489;
+      }
+    </style>
+    <script src="jquery-3.5.1.min.js"></script>
+</head>
+<body class="container">
+		<video controle autoplay muted loop style="z-index: -1;  position: fixed; right: 0; bottom: 0; min-width: 100%; min-height: 100%; opacity: 0.5;">
+		<source src="tournoi.mp4" type="video/mp4">
+	</video>
+
+	<div style="display: flex; flex-direction: column;justify-content: center;align-items: center;">
+
+	<img style="width: 18%; margin-bottom: -54px;" src="WELCOMEFF.png">
+	<p>SEE</p>
+	<iframe width="560" height="315" src="https://www.youtube.com/embed/dxvJAk4Sy_U" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	<p>Start</p>
+	
+	<a style="display: flex; justify-content: center;" href=""><img src="LiveEx.png" style="width: 25%;">
+    </a>
+
+    </div>
+
+
+
+
+    <script>
+      $(document).ready(function() {
+    // Let's simulate some loading time.
+    
+    setTimeout(function() {
+        $('.container').addClass('container-loaded');
+    }, 1500);
+});
+    </script>
+</body>
+</html>
